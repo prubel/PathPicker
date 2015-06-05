@@ -140,9 +140,9 @@ def getRepoPath():
         logger.addEvent('using_hg')
         return stdout
 
-    # Not a git or hg repo, go with ~/www as a default
+    # Not a git or hg repo, go with ./ as a default
     logger.addEvent('used_outside_repo')
-    return './'
+    return '.'
 
 
 PREPEND_PATH = getRepoPath().strip() + '/'
